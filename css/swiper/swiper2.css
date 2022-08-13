@@ -1,0 +1,14 @@
+  .swiper-container {
+            text-align: center;
+        }
+
+        .swiper-container .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .prettyprint {
+            border: none;
+            background: #fafafa;
+            color: #697d86;
+        }

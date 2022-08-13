@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>MIKE PortoFolioSite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/swiper/swiper.min.css">
+    <link rel="stylesheet" href="./css/swiper/swiper2.css">
+
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type="text/javascript" src="js/header-menu.js"></script>
+    <script type="text/javascript" src="js/swiper/swiper-script.js"></script>
+
+    <script>
+        // HTMLドキュメントの解析後に実行
+        window.addEventListener('DOMContentLoaded', function() {
+            // XMLHttpRequestのインスタンスを作成
+            var req = new XMLHttpRequest();
+
+            // 読み込み時の処理を設定
+            req.onreadystatechange = function() {
+                // readyState=4は全てのデータを受信済み、
+                // status=200は正常に処理されたことを意味します
+                if (req.readyState == 4 && req.status == 200) {
+                    // 結果を代入
+                    document.getElementById("message").innerHTML = req.responseText;
+                }
+            }
+
+            // 接続先のURLやメソッドを設定します
+            req.open("GET", "output_rss.php");
+
+            // リクエストをサーバに送信
+            req.send();
+
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="inner">
+            <div id="mobile-head">
+                <h1>MIKE PortofolioSite</h1>
+
+                <div id="nav-toggle">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <nav class="gnavi">
+                    <ul id="page-link">
+                        <li><a href="#profile">プロフィール</a></li>
+                        <li><a href="#skill">スキル</a></li>
+                        <li><a href="#works">実績</a></li>
+                        <li><a href="http://kenchan1980.sakura.ne.jp/kmsite/wp/blog/">ブログ</a></li>
+                        <li><a href="#contact">お問合せ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="main-image">
+        <div class="mi-text"> ようこそ　MIKE PorofolioSiteへ </div>
+    </section>
+    <section class="row profile">
+        <h2 id="profile">プロフィール</h2>
+        <div class="profile-contents">
+
+
+            <ul>
+                <li>名前:kenchan1980</li>
+                <li>誕生日:1980年11月2日</li>
+                <li>年齢:アラフォー前半</li>
+                <li>住所：大阪市内</li>
+                <li>最終学歴：WAO！クリエイティブカレッジ</li>
+                <li>Web歴：大学時代にWebの勉強を独学したのがきっかけです。</li>
+                <li>自宅のパソコン：Windows10 (過去、Vista・XP・98・95)。 </li>
+            </ul>
+
+        </div>
+    </section>
+    <section class="row skill">
+        <h2 id="skill">スキル</h2>
+        <div class="skill-contents">
+            <div class="skill-box"> <i class="skill-icon fa fa-code"></i>
+                <div class="skill-title">CODING</div>
+                <dl style="text-align: left;">
+                    <dd>HTML・HTML5・CSSを用いたコーディングや、Webサイトの修正や更新ができます。Dreamweaverでも手打ちでも可能です。
+                    </dd>
+                </dl>
+            </div>
+            <div class="skill-box"> <i class="skill-icon fas fa-file-code"></i>
+                <div class="skill-title">PROGRAM</div>
+                <dl style="text-align: left;">
+                    <dd>JQueryなどのサンプルコードをダウンロードして、組み込むことはできます。 他には、WORDPRESSも触ったことがあります。</dd>
+                </dl>
+            </div>
+            <div class="skill-box"> <i class="skill-icon fas fa-laptop"></i>
+                <div class="skill-title">Date Entry</div>
+                <dl style="text-align: left;">
+                    <dd>データ入力業務も可能です。</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+    <section class="row works">
+        <h2 id="works">実績</h2>
+        <div class="works-contents">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/swiper/works_01.png" alt="株式会社デザインアーク　らくだ館">
+                        <ul>
+                            <li>モデルルーム・住宅展示場展示家具の出品作業</li>
+                            <li>ECサイト（楽天・makeshop）の更新・修正</li>
+                        </ul>
+                        <p class="link-detail"><a href="./skill/works/works_04.html">詳細はこちら</a></p>
+                    </div>
+
+                    <div class="swiper-slide"><img src="images/swiper/works_03.png" alt="株式会社オンライン　飲料メーカーコーポレートサイト　コーディング＆データー流し込み">
+                        <ul>
+                            <li>コンテンツのコーディング</li>
+                            <li>ニュースリリース7年分をレスポンシブテンプレートに移行</li>
+                        </ul>
+                        <p class="link-detail"><a href="./skill/works/works_05.html">詳細はこちら</a></p>
+                    </div>
+                    <div class="swiper-slide"><img src="images/swiper/works_04.png" alt="株式会社シェア　顧客企業Webサイト　更新作業など">
+                        <ul>
+                            <li>顧客企業のWebサイト修正・更新業務</li>
+                            <li>ポータルサイトへの情報登録</li>
+                        </ul>
+                        <p class="link-detail"><a href="./skill/works/works_06.html">詳細はこちら</a></p>
+                    </div>
+                    <div class="swiper-slide"><img src="images/swiper/works_mizuno.png" alt="美津濃株式会社 ブランドサイトリニューアル　データー移し替えとコーディング">
+                        <ul>
+                            <li>旧サイトから新サイトへのデーター移行（CMS使用）</li>
+                            <li>コンテンツのコーディング</li>
+                        </ul>
+                        <p class="link-detail"><a href="./skill/works/works_12.html">詳細はこちら</a></p>
+                    </div>
+                    <div class="swiper-slide"><img src="images/swiper/works_05.png" alt="個人制作　石材店Webサイト制作">
+                        <ul>
+                            <li>石材店Webサイトリニューアル</li>
+                        </ul>
+                        <p class="link-detail"><a href="./skill/works/works_10.html">詳細はこちら</a></p>
+                    </div>
+                    <div class="swiper-slide"><img src="images/swiper/works_02.png" alt="LA CAFFE KENYA（ラ・カフェケニヤ）">
+                        <ul>
+                            <li>カフェ店Webサイトリニューアル</li>
+                        </ul>
+                        <p class="link-detail"><a href="./skill/works/works_11.html">詳細はこちら</a></p>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="more-works">
+            <a href="skill/skill.html" class="link-btn1">＞＞　実績とスキルを見てみる　＜＜</a></div>
+
+    </section>
+
+    <section class="row blog">
+        <h2 id="blog">ブログ</h2>
+        <div class="article">
+            <div id="rss"></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="rss.js"></script>
+
+    </section>
+    <section class="row contact">
+        <h2 id="contact">お問合せ</h2>
+        <p>お問い合わせは、以下のボタンからどうぞ。</p>
+        <div class="contact-button">
+            <a href="http://kenchan1980.sakura.ne.jp/kmsite/wp/contact/" class="Mail-button"><span><i class="fa fa-envelope"></i> MAIL</span></a>
+        </div>
+        <p id="page-top"><a href="#">Page Top</a></p>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                <ul>
+
+                    <li><a href="#profile">プロフィール</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./skill/skill.html">スキル・実績</a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://kenchan1980.sakura.ne.jp/kmsite/wp/blog/">ブログ</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./contact/">お問合せ</a></li>
+                </ul>
+            </div>
+            <p class="footer-copyright"><small>
+                    copyright © 2021 MIKE PortoFolioSite All Rights Reserved.</small></p>
+        </div>
+    </footer>
+
+    <script src="js/swiper/swiper.min.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/pagetop.js"></script>
+</body>
+
+</html>
